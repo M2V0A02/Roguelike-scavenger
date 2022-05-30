@@ -12,14 +12,14 @@ public class Wall : MonoBehaviour
 
     void Awake()
     {
-        spriteRender = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     public void DamageWall (int loss)
     {
-        spriteRender.sprite = damageSprite;
+        spriteRenderer.sprite = damageSprite;
         hp -= loss;
         if (hp == 0)
-            gamageObject.setActive(false);
+            gameObject.SetActive(false);
     }
 }
